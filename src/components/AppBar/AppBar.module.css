@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    background-color: rgb(107, 105, 105);
+    overflow: auto;
+  }
+  
+  .container a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+  }
+  
+  .container a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }

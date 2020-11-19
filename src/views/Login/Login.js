@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 import {withAuth} from '../../components/Authentication/Authentication'
 const Login = ({authenticate} ) => {
-
+  
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
     const { register, handleSubmit, errors } = useForm();
@@ -17,11 +17,10 @@ const Login = ({authenticate} ) => {
 
   
       const onSubmit = (data) => {
-        debugger
-          
+        
         authenticate(data.username, data.password)
         .then(result=>{
-          debugger;
+     
           setAuthData({
             isLoggingIn: false,
             redirectToReferrer: true,
@@ -29,8 +28,7 @@ const Login = ({authenticate} ) => {
           });
 
         }).catch( (error)=> {
-          debugger;
-
+    
           setAuthData({
             isLoggingIn: false,
             redirectToReferrer: false,

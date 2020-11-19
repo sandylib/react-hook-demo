@@ -4,3 +4,5 @@ export const APP_USER_ROLES = {
     INTERMEDIARY : 'INTERMEDIARY',
     BUSINESS :'BUSINESS'
 }
+
+export const CURRENT_USER = 'CURRENT_USER' 

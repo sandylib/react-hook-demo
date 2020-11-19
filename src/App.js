@@ -7,20 +7,25 @@ import NotFound from './views/NotFound/NotFound';
 import Login from './views/Login/Login';
 import { APP_USER_ROLES } from './constants/applicationConstants';
 
+import AppBar from './components/AppBar/AppBar'
+
 
 function App() {
   return (
-    <div className="App">
+    <AuthenticationManger>
       <Router>
-        <AuthenticationManger>
+      <AppBar />
+       <div className="App">
         <Switch>
             <PrivateRoute exact permissions={[APP_USER_ROLES.INDIVIDUAL]}  path="/"  component={MyProfile} />
             <Route exact path="/login"  component={Login} />
             <Route path="*"  component={NotFound} />
           </Switch>
-        </AuthenticationManger>
+        
+  
+      </div>
       </Router>
-    </div>
+      </AuthenticationManger>
    );
   }
 
